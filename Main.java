@@ -2,12 +2,9 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         String[][] field = new String[4][4];
         String endgame = "Game on";
-
-
 
         InitialFill(field);
         Print(field);
@@ -25,7 +22,6 @@ public class Main {
             if(endgame.equalsIgnoreCase("O wins") || endgame.equalsIgnoreCase("Draw") && !CheckMissingPlay(field)){
                 break;
             }
-
         }
 
         if (endgame.equals("O wins")) {
@@ -40,7 +36,6 @@ public class Main {
             System.out.println(endgame);
 
         }
-
     }
 
     public static void PlayerXMove(String[][] field) {
@@ -70,7 +65,6 @@ public class Main {
             System.out.println("Coordinates should be from 1 to 3!");
             PlayerXMove(field);
         }
-
     }
 
     public static void PlayerOMove(String[][] field) {
@@ -145,7 +139,6 @@ public class Main {
         else{
             return "Game on";
         }
-
     }
 
     public static boolean CheckMissingPlay(String[][] field){
